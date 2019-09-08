@@ -1,0 +1,30 @@
+{
+    "name": "wetyper/skeleton",
+    "type": "project",
+    "description": "WeTyper is an amazing and powerful open source blog system.",
+    "keywords": [
+        "wetyper",
+        "blog"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "wetyper/wetyper": "^1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [],
+        "post-root-package-install": [],
+        "post-create-project-cmd": []
+    }
+}
