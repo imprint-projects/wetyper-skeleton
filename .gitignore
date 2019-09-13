@@ -14,10 +14,6 @@ nbproject
 vendor
 composer.lock
 
-# Environment
-.env
-.env.backup
-
 # Storage
 /public/storage
 /storage/*.key

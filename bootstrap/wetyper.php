@@ -1,33 +1,34 @@
 <?php
 
-/**
- * WeTyper - An amazing and powerful blog system
- *
- * @author You Ming <youming@funcuter.org>
- */
-
-define('WETYPER_START', microtime(true));
+use WeTyper\WeTyper;
 
 /*
 |--------------------------------------------------------------------------
-| Register The Auto Loader
+| Create The WeTyper
 |--------------------------------------------------------------------------
 */
 
-require __DIR__.'/../vendor/autoload.php';
+$wetyper = WeTyper::create(
+    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
+);
 
 /*
 |--------------------------------------------------------------------------
-| Turn On The Lights
+| Bind Your Interfaces
 |--------------------------------------------------------------------------
 */
 
-$wetyper = require_once __DIR__.'/../bootstrap/wetyper.php';
+// $app = $wetyper->getApp();
+//
+// $app->singleton(
+//     Illuminate\Contracts\Debug\ExceptionHandler::class,
+//     App\Exceptions\Handler::class
+// );
 
 /*
 |--------------------------------------------------------------------------
-| Handle HTTP Requests
+| Return The WeTyper
 |--------------------------------------------------------------------------
 */
 
-$wetyper->handleRequest();
+return $wetyper;
