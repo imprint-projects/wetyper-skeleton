@@ -11,6 +11,10 @@
         "php": "^7.2",
         "wetyper/wetyper": "^1.0"
     },
+    "require-dev": {
+        "laravel/tinker": "^1.0",
+        "filp/whoops": "^2.4"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
